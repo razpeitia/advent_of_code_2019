@@ -47,6 +47,11 @@ unfortunatelly the implementation is crap.
 Ok, this was actually easy. Too late but I start noticing a pattern.
 1 easy problem followed by 1 hard problem.
 
+### Level 9
+
+As expected, once again a relatively hard problem + using the state
+machine. It wasn't hard per se, but since the code wasn't written
+to be maintainable. Maybe I should refactor this.
 
 ### Retrospective
 
