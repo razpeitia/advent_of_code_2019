@@ -49,7 +49,7 @@ def main():
     m = len(M)
     n = len(M[0])
     asteroids = [(i, j) for i in range(m) for j in range(n) if M[i][j] == '#']
-    best = (13, 11)
+    best = (11, 11)
     asteroids = [a for a in asteroids if a != best]
     pp = [polar(p, best) for p in asteroids]
     d = defaultdict(list)
