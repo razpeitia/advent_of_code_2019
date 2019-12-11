@@ -53,6 +53,23 @@ As expected, once again a relatively hard problem + using the state
 machine. It wasn't hard per se, but since the code wasn't written
 to be maintainable. Maybe I should refactor this.
 
+### Level 10
+
+I spend a good chunk of time trying to understand the problem, 
+it wasn't easy at first, specially if you can't see the data.
+Once I started, building the pygame viewer everything makes
+sense. On the other hand I spend way to much time a simple
+error, (hardcoding the best spot) :facepalm:
+
+### Level 11
+
+I didn't like it, it doesn't provide an example intcode input.
+Also for some reason I had to do some hack to get the 
+right answer in part 2, maybe I have a bug in my state machine,
+or maybe I did something wrong when printing the map.
+To be fair it was easy, because we have generators in python,
+so, tonight I can sleep like a baby.
+
 ### Retrospective
 
 Guessing what to actually implement takes more time than solving the problem itself.
