@@ -70,6 +70,14 @@ or maybe I did something wrong when printing the map.
 To be fair it was easy, because we have generators in python,
 so, tonight I can sleep like a baby.
 
+### Level 12
+
+Part 1 was easy, but I have problems implementing it, just because
+I wanted to use classes and at the end I used simple lists.
+Part 2 was a little bit intimidating at first glance, but it was
+easy once you understand that every axis is independent and you can
+form a solution based on that.
+
 ### Retrospective
 
 Guessing what to actually implement takes more time than solving the problem itself.

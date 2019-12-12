@@ -1,5 +1,4 @@
 from itertools import combinations
-from copy import copy
 from math import gcd
 
 def calc(x1, x2):
