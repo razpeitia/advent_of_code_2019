@@ -1,4 +1,4 @@
-def main(memory):
+def machine(memory, signal):
     PC = 0
     RB = 0
     while True:
@@ -25,7 +25,7 @@ def main(memory):
             memory[addr] = a * b
             PC += 4
         elif opcode == 3:
-            a = int(input("ID > "))
+            a = next(signal)
             if mode[0] == 0:
                 memory[memory[PC+1]] = a
             elif mode[0] == 1:
@@ -84,19 +84,59 @@ def main(memory):
             RB += a
             PC += 2
 
-with open("input13.txt") as f:
-    memory = [int(i) for i in f.read().strip().split(",")]
+def print_grid(grid):
+    for row in grid:
+        print(''.join(row))
 
-g = main(memory[:] + [0] * 4000)
-ans = 0
-while True:
-    try:
-        a = next(g)
-        b = next(g)
-        c = next(g)
-        print(a, b, c)
-        if c == 2:
-            ans += 1
-    except StopIteration:
-        break
-print(ans)
+def signals(grid, state):
+    ball = player = None
+    vi, vj = 0, 0
+    while True:
+        print_grid(grid)
+        print("Score:", state[0])
+        for i, row in enumerate(grid):
+            for j, cell in enumerate(row):
+                if cell == '.':
+                    if ball is not None:
+                        vi = i - ball[0]
+                        vj = j - ball[1]
+                    ball = (i, j)
+                elif cell == '=':
+                    player = (i, j)
+        print(player, ball, vi, vj)
+        if player[1] > ball[1]:
+            yield -1
+        elif player[1] < ball[1]:
+            yield 1
+        else:
+            yield 0
+
+def main():
+    grid = [[' '] * 50 for _ in range(25)]
+    with open("input13.txt") as f:
+        memory = [int(i) for i in f.read().strip().split(",")]
+
+    sprites = {
+        0: ' ',
+        1: '#',
+        2: '0',
+        3: '=',
+        4: '.'
+    }
+    state = [0]
+    memory[0] = 2
+    g = machine(memory + [0] * 4000, signals(grid, state))
+    while True:
+        try:
+            j = next(g)
+            i = next(g)
+            t = next(g)
+            if (i, j) == (0, -1):
+                state[0] = t
+            else:
+                grid[i][j] = sprites[t]
+        except StopIteration:
+            print("ans:", t)
+            break
+    
+main()
