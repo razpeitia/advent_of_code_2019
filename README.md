@@ -78,6 +78,17 @@ Part 2 was a little bit intimidating at first glance, but it was
 easy once you understand that every axis is independent and you can
 form a solution based on that.
 
+### Level 13
+
+More intcode
+
+### Level 14
+
+I have to confess that I had to check the hints on reddit to get
+the answer. I was so close, in retrospective the recursive approach
+is way more complex. Keeping things simple and tracking the leftovers
+was the right approach.
+
 ### Retrospective
 
 Guessing what to actually implement takes more time than solving the problem itself.
