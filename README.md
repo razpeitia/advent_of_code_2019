@@ -94,6 +94,13 @@ was the right approach.
 It was simple, it just takes a lot of work. Simple BFS approach after
 exploring the maze.
 
+### Level 16
+
+I shameless used spoilers for this one: https://www.reddit.com/r/adventofcode/comments/ebf5cy/2019_day_16_part_2_understanding_how_to_come_up/
+
+First part was a piece of cake, but for the second part you need to be more clever.
+The trick was only keep the second half of the output.
+
 ### Retrospective
 
 Guessing what to actually implement takes more time than solving the problem itself.
