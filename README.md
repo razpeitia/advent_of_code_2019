@@ -89,6 +89,11 @@ the answer. I was so close, in retrospective the recursive approach
 is way more complex. Keeping things simple and tracking the leftovers
 was the right approach.
 
+### Level 15
+
+It was simple, it just takes a lot of work. Simple BFS approach after
+exploring the maze.
+
 ### Retrospective
 
 Guessing what to actually implement takes more time than solving the problem itself.
